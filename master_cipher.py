@@ -39,7 +39,7 @@ class MasterCypher():
             Its just a SUBSTITUTION CIPHER but what makes it interesting is the use of different keys and different wheels.
             If I had to explain in a simple way I can do so with an example:
             Say the text is 'hello world' pretty basic secret message.
-            Now the cipher asks for the number of wheels for simplicity lets assume the number of wheels to be 3
+            Now the cipher asks for the number of wheels, for simplicity lets assume the number of wheels to be 3
             Then the cipher asks for the sets of keys again for simplicity lets assume that the key is '1, 2, 3'
             
             The cipher first goes through the pincodes given by the user in this case 1, 2, 3 and transposes the list of alphabets to 
@@ -49,25 +49,25 @@ class MasterCypher():
             for 3: a=d, b=e, c=f and so on
             
             then it appends the values of the now transposed set of alphabets to its respective names in a pre-defined dictionary.
-            The it loops over in a range of length of the secret text in this case 'helloworld' which is 10;
+            Then it loops over in a range of length of the secret text in this case 'helloworld' which is 10;
             
             for loop 1:
-                >>> letter = 'h' and it goes through the first wheel which is transposed by +1 so h=i
+                >>> letter = 'h' and it goes through the FIRST wheel which is transposed by +1 so h=i
              for loop 2:
-                >>> letter = 'e' and it goes through the second wheel which is transposed by +2 so e=g
+                >>> letter = 'e' and it goes through the SECOND wheel which is transposed by +2 so e=g
               for loop 3:
-                >>> letter = 'l' and it goes through the third wheel which is transposed by +3 so l=o
+                >>> letter = 'l' and it goes through the THIRD wheel which is transposed by +3 so l=o
                for loop 4:
-                >>> letter = l and it goes through the first wheel which is transposed by +1 so l=m
+                >>> letter = l and it goes through the FIRST wheel which is transposed by +1 so l=m
                 for loop 5:
-                    >>> letter = 'o' and it goes through the second wheel which is transposed by +2 so o=q
+                    >>> letter = 'o' and it goes through the SECOND wheel which is transposed by +2 so o=q
                
                .......
                The loop continues till the length of the secret text in each iteration or loop the wheel changes as shown in the example
                above.
              
              Lastly the secret ciphered text is reversed this is done for the purpose of blanketting the cipher a step more.
-             Oh for the above example the cipher becomes 'eotpzqmogi' ====>>> the cipher is the returned after being reversed
+             Oh for the above example the cipher becomes 'eotpzqmogi' ====>>> the cipher is returned after being reversed
            
             
             
