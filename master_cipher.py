@@ -90,7 +90,6 @@ class MasterCypher():
         '''Initializing the program'''
         self.script = script #secret message
         self.keys = keys #string of unformatted keys eg:{'1, 23, 13, 12'}
-        self.mode = mode 
         self.numb_wheels = numb_wheels #calling the number of wheels to be used
         self.alpha = list(string.ascii_lowercase)
         self.alpha_numb = [i for i in range(len(self.alpha))]
